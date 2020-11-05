@@ -1,1 +1,4 @@
-oli prro :v
+osea que que el git add . se va todo
+git commit -m "hola" solo es para nombrarlo
+el git push es para subirlo
+y el git pull es para recibirlo
