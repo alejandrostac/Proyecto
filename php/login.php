@@ -8,7 +8,7 @@
 	if($resultado = mysqli_query($enlace, $query)){
 		echo "La conexión fue exitosa<br>";
 		if(mysqli_num_rows($resultado)>0){
-			echo "Acceso Aceptado";
+			header("location: ../student.html");
 		}else{
 			echo "Acceso Denegado";
 		}
