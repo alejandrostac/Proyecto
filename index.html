@@ -10,145 +10,155 @@
 </head>
 
 <body>
-<div class="row mt-5" >
-</div>
-<div class="row mt-5" >
-    <div class="col-sm-3"></div>
-    <div class="card text-center col-sm-6 ">
-        <div class="card-header bg-transparent">
-            <div>
-                <div class="d-flex justify-content-center"><img  width="80%" src="pic/logo.PNG" alt=""></div>
-            </div>
-            <div>
-                <ul class="nav nav-tabs card-header-tabs">
-                    <li class="nav-item">
-                        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">       Inicio de sesion para Alumnos
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">    Inicio de sesion para Maestros
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            
-        </div>
-        <div class="card-body">
-            <h5 class="card-title">
-                <div class="tab-content" id="myTabContent">
-                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                        <h3>Iniciar sesión como alumno</h3>
-                        <div class="wrapper fadeInDown">
-                            <div id="formContent">
-                                <div class="fadeIn first">
-                                </div>
-                                <form action="php/login.php" method="POST">
-                                    <div class="form-group row">
-                                        <label for="user" class="col-md-2 col-form-label">Usuario</label>
-                                        <div class="col-md-10">
-                                            <input type="text" id="user" class="form-control" name="user" placeholder="Usuario">
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label for="password" class="col-md-2 col-form-label">Contraseña</label>
-                                        <div class="col-md-10">
-                                            <input type="password" id="password" class="form-control" name="password" placeholder="Contraseña">
-                                        </div>
-                                    </div>
-                                    <div class="col">
-                                        <input type="submit" class="fadeIn fourth btn btn-primary" value="Iniciar Sesion"><br>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                        <h3>Iniciar sesión como maestro</h3>
-                        <div class="wrapper fadeInDown">
-                            <div id="formContent">
-                                <div class="fadeIn first">
-                                </div>
-                                <form action="php/login.php" method="POST">
-                                    <div class="form-group row">
-                                        <label for="user" class="col-md-2 col-form-label">Usuario</label>
-                                        <div class="col-md-10">
-                                            <input type="text" id="user" class="form-control" name="user" placeholder="Usuario">
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label for="password" class="col-md-2 col-form-label">Contraseña</label>
-                                        <div class="col-md-10">
-                                            <input type="password" id="password" class="form-control" name="password" placeholder="Contraseña">
-                                        </div>
-                                    </div>
-                                    <div class="col">
-                                        <input type="submit" class="fadeIn fourth btn btn-primary" value="Iniciar Sesion"><br>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-
+    <div class="row mt-5">
+    </div>
+    <div class="row mt-5">
+        <div class="col-sm-3"></div>
+        <div class="card text-center col-sm-6 ">
+            <div class="card-header bg-transparent">
+                <div>
+                    <div class="d-flex justify-content-center"><img width="80%" src="pic/logo.PNG" alt=""></div>
                 </div>
-            </h5>
+                <div>
+                    <ul class="nav nav-tabs card-header-tabs">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab"
+                                aria-controls="home" aria-selected="true"> Inicio de sesion para Alumnos
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab"
+                                aria-controls="profile" aria-selected="false"> Inicio de sesion para Maestros
+                            </a>
+                        </li>
+                    </ul>
+                </div>
 
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                            <h3>Iniciar sesión como alumno</h3>
+                            <div class="wrapper fadeInDown">
+                                <div id="formContent">
+                                    <div class="fadeIn first">
+                                    </div>
+                                    <form action="php/login.php" method="POST">
+                                        <div class="form-group row">
+                                            <label for="user" class="col-md-2 col-form-label">Usuario</label>
+                                            <div class="col-md-10">
+                                                <input type="text" id="user" class="form-control" name="user"
+                                                    placeholder="Usuario">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="password" class="col-md-2 col-form-label">Contraseña</label>
+                                            <div class="col-md-10">
+                                                <input type="password" id="password" class="form-control"
+                                                    name="password" placeholder="Contraseña">
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <input type="submit" class="fadeIn fourth btn btn-primary"
+                                                value="Iniciar Sesion"><br>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                            <h3>Iniciar sesión como maestro</h3>
+                            <div class="wrapper fadeInDown">
+                                <div id="formContent">
+                                    <div class="fadeIn first">
+                                    </div>
+                                    <form action="php/login.php" method="POST">
+                                        <div class="form-group row">
+                                            <label for="user" class="col-md-2 col-form-label">Usuario</label>
+                                            <div class="col-md-10">
+                                                <input type="text" id="user" class="form-control" name="user"
+                                                    placeholder="Usuario">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="password" class="col-md-2 col-form-label">Contraseña</label>
+                                            <div class="col-md-10">
+                                                <input type="password" id="password" class="form-control"
+                                                    name="password" placeholder="Contraseña">
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <input type="submit" class="fadeIn fourth btn btn-primary"
+                                                value="Iniciar Sesion"><br>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </h5>
+
+            </div>
         </div>
     </div>
-</div>
-<div class="col text-center mt-3">
-    <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Crear usuario Alumno</button>
-    <button class="btn btn-primary">Crear usuario Maestro</button>
-</div>
-
-<div class="modal fade  .modal-lg" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Registrar Alumno</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <form>
-            <div class="row">
-                <div class="col form-group">
-                    <label for="name" class="col-form-label">Nombre:</label>
-                    <input type="text" class="form-control" id="name">
-                  </div>
-                  <div class="col form-group">
-                    <label for="lastname" class="col-form-label">Apellido:</label>
-                    <input type="text" class="form-control" id="lastname">
-                  </div>
-            </div>
-            <div class="form-group">
-                <label for="user" class="col-form-label">Nombre de Usuario:</label>
-                <input type="text" class="form-control" id="user">
-            </div>
-            <div class="form-group">
-                <label for="pass1" class="col-form-label">Contraseña:</label>
-                <input type="password" class="form-control" id="pass1">
-            </div>
-            <div class="form-group">
-                <label for="pass2" class="col-form-label">Confirmar contraseña:</label>
-                <input type="password" class="form-control" id="pass2">
-            </div>
-            <div class="form-group">
-                <label for="email" class="col-form-label">Correo electronico:</label>
-                <input type="text" class="form-control" id="email">
-            </div>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary">Registrar Alumno</button>
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-      </div>
+    <div class="col text-center mt-3">
+        <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Crear usuario Alumno</button>
+        <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal2" >Crear usuario Maestro</button>
     </div>
-</div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<!-- Importante llamar antes a jQuery para que funcione bootstrap.min.js   -->
-<script src="js/bootstrap.min.js"></script> <!-- Llamamos al JavaScript de Bootstrap -->
+    <div class="modal fade  .modal-lg" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Registrar Alumno</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="row">
+                            <div class="col form-group">
+                                <label for="name" class="col-form-label">Nombre:</label>
+                                <input type="text" class="form-control" id="name">
+                            </div>
+                            <div class="col form-group">
+                                <label for="lastname" class="col-form-label">Apellido:</label>
+                                <input type="text" class="form-control" id="lastname">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="user" class="col-form-label">Nombre de Usuario:</label>
+                            <input type="text" class="form-control" id="user">
+                        </div>
+                        <div class="form-group">
+                            <label for="pass1" class="col-form-label">Contraseña:</label>
+                            <input type="password" class="form-control" id="pass1">
+                        </div>
+                        <div class="form-group">
+                            <label for="pass2" class="col-form-label">Confirmar contraseña:</label>
+                            <input type="password" class="form-control" id="pass2">
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="col-form-label">Correo electronico:</label>
+                            <input type="text" class="form-control" id="email">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Registrar Alumno</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                </div>
+            </div>
+        </div>
+
+       
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <!-- Importante llamar antes a jQuery para que funcione bootstrap.min.js   -->
+        <script src="js/bootstrap.min.js"></script> <!-- Llamamos al JavaScript de Bootstrap -->
 </body>
 
 </html>
