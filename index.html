@@ -1,91 +1,103 @@
-<!DOCTYPE html> 
-<html lang="es"> 
-  <head> 
-    <meta charset="utf-8"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Con esto garantizamos que se vea bien en dispositivos móviles --> 
-    <title>Mi primer proyecto con Booststrap</title> 
- 
-    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen"> <!-- Llamamos al archivo CSS --> 
-  </head> 
-  <body>
-        <div class="container" style="padding-top: 10%;">
-            <h1 style="text-align: center;">Accesos</h1>
-            <div class="card " style="width:50%;margin: auto;">
-                <div class="card-header" style="margin: auto;" >
-                    <ul class="nav nav-tabs" id="myTab" role="tablist">
-                        <li class="nav-item">
-                          <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Inicio de sesion para Alumnos</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Inicio de sesion para Maestros</a>
-                        </li>
-                      </ul>
-                </div>
-                <div class="card-body">
-                  <h5 class="card-title"><div class="tab-content" id="myTabContent">
-                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab"><div class="wrapper fadeInDown">
-                        <div id="formContent">
-                          <!-- Tabs Titles -->
-                      
-                          <!-- Icon -->
-                          <div class="fadeIn first">
-                            
-                          </div>
-                      
-                          <!-- Login Form -->
-                          <form style="margin: auto;text-align: -webkit-center;" >
-                              <a></a>
-                            <div ><input type="text" id="login" class="fadeIn second" name="login" placeholder="Usuario" style="text-align: center; width: 90%; "></div><br>
-                            <div><input type="password" id="password" class="fadeIn third" name="login" placeholder="Contraseña" style="text-align: center; width: 90%; "></div><br>
-                            <div><input type="submit" class="fadeIn fourth btn btn-primary" value="Iniciar Sesion"></div><br>
-                          </form>
-                      
-                          <!-- Remind Passowrd -->
-                          <div id="formFooter" style="margin: auto;text-align: -webkit-center;">
-                            <button class="btn btn-primary">Crear usuario Alumno</button>
-                            <button class="btn btn-primary">Crear usuario Mestro</button>
-                          </div>
-                      
-                        </div>
-                      </div>
-                    </div>
-                    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab"><div class="wrapper fadeInDown">
-                        <div id="formContent">
-                          <!-- Tabs Titles -->
-                      
-                          <!-- Icon -->
-                          <div class="fadeIn first">
-                            
-                          </div>
-                      
-                          <!-- Login Form -->
-                          <form style="margin: auto;text-align: -webkit-center;" >
-                            <a></a>
-                          <div ><input type="text" id="login" class="fadeIn second" name="login" placeholder="Usuario" style="text-align: center; width: 90%; "></div><br>
-                          <div><input type="password" id="password" class="fadeIn third" name="login" placeholder="Contraseña" style="text-align: center; width: 90%; "></div><br>
-                          <div><input type="submit" class="fadeIn fourth btn btn-primary" value="Iniciar Sesion"></div><br>
-                        </form>
-                    
-                        <!-- Remind Passowrd -->
-                        <div id="formFooter" style="margin: auto;text-align: -webkit-center;">
-                          <button class="btn btn-primary">Crear usuario Alumno</button>
-                          <button class="btn btn-primary">Crear usuario Mestro</button>
-                        </div>
-                    
-                      </div>
-                    </div>
-                  </div>
-                    
-                  </div></h5>
-                 
-                </div>
-              </div>
-           
-              
+<!DOCTYPE html>
+<html lang="es">
 
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Con esto garantizamos que se vea bien en dispositivos móviles -->
+    <title>Mi primer proyecto con Booststrap</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen"> <!-- Llamamos al archivo CSS -->
+</head>
+
+<body>
+    <div class="row mt-5" >
+        <div class="col-sm-3"></div>
+        <div class="card text-center col-sm-6 ">
+            <div class="card-header">
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab"
+                            aria-controls="home" aria-selected="true">Inicio de sesion para Alumnos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab"
+                            aria-controls="profile" aria-selected="false">Inicio de sesion para Maestros</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">
+                    <div class="tab-content" id="myTabContent">
+                        
+                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                            <h3>Iniciar sesión como alumno</h3>
+                            <div class="wrapper fadeInDown">
+                                <div id="formContent">
+
+                                    <div class="fadeIn first">
+
+                                    </div>
+
+
+                                    <form>
+
+                                        <div><input type="text" id="login" class="form-control" name="login"
+                                                placeholder="Usuario"></div><br>
+                                        <div><input type="password" id="password" class="form-control" name="login"
+                                                placeholder="Contraseña"></div><br>
+                                        <div><input type="submit" class="fadeIn fourth btn btn-primary"
+                                                value="Iniciar Sesion"></div><br>
+                                    </form>
+
+
+
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                            <h3>Iniciar sesión como maestro</h3>
+                            <div class="wrapper fadeInDown">
+                                <div id="formContent">
+
+                                    <div class="fadeIn first">
+
+                                    </div>
+
+
+                                    <form>
+
+                                        <div><input type="text" id="login" class="form-control" name="login"
+                                                placeholder="Usuario"></div><br>
+                                        <div><input type="password" id="password" class="form-control" name="login"
+                                                placeholder="Contraseña"></div><br>
+                                        <div><input type="submit" class="fadeIn fourth btn btn-primary"
+                                                value="Iniciar Sesion"></div><br>
+                                    </form>
+
+
+
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </h5>
+
+            </div>
         </div>
-            
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> <!-- Importante llamar antes a jQuery para que funcione bootstrap.min.js   -->
-            <script src="js/bootstrap.min.js"></script> <!-- Llamamos al JavaScript de Bootstrap --> 
-  </body> 
-</html> 
+    </div>
+    <div class="col text-center mt-3">
+        <button class="btn btn-primary">Crear usuario Alumno</button>
+        <button class="btn btn-primary">Crear usuario Maestro</button>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <!-- Importante llamar antes a jQuery para que funcione bootstrap.min.js   -->
+    <script src="js/bootstrap.min.js"></script> <!-- Llamamos al JavaScript de Bootstrap -->
+</body>
+
+</html>
