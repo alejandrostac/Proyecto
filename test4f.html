@@ -22,6 +22,7 @@
                         </div>
                     </div>
                     <form id="form" action="php/rate.php">
+                        <input type="hidden" name="name" value="Ortografía 4TO TRIMESTRE EVALUACIÓN FINAL">
                         <div id="dq1" class="question bg-white p-3 border-bottom">
                             <div class="d-flex flex-row align-items-center question-title">
                                 <h3 class="text-danger">1.</h3>
@@ -46,11 +47,11 @@
                                 <h5 class="mt-1 ml-2">De la siguiente lista de palabras, ¿cuál se escribe sin h?</h5>
                             </div>
                             <div class="ans ml-2">
-                                <label class="radio"> <input type="radio" name="q2" value="1" onclick="check()"> <span>Undir</span>
+                                <label class="radio"> <input type="radio" name="q2" value="0" onclick="check()"> <span>Undir</span>
                                 </label>
                             </div>
                             <div class="ans ml-2">
-                                <label class="radio"> <input type="radio" name="q2" value="0" onclick="check()"> <span>error</span>
+                                <label class="radio"> <input type="radio" name="q2" value="1" onclick="check()"> <span>error</span>
                                 </label>
                             </div>
                             <div class="ans ml-2">
@@ -61,72 +62,72 @@
                         <div id="dq3" class="question bg-white p-3 border-bottom" hidden>
                             <div class="d-flex flex-row align-items-center question-title">
                                 <h3 class="text-danger">3.</h3>
-                                <h5 class="mt-1 ml-2">¿Cuál es la palabra correcta?</h5>
+                                <h5 class="mt-1 ml-2">Indica cuál de las siguientes palabras no se encuentra escrita correctamente:</h5>
                             </div>
                             <div class="ans ml-2">
-                                <label class="radio"> <input type="radio" name="q3" value="0" onclick="check()"> <span>Extrangero</span>
+                                <label class="radio"> <input type="radio" name="q3" value="0" onclick="check()"> <span>cohabitar</span>
                                 </label>
                             </div>
                             <div class="ans ml-2">
-                                <label class="radio"> <input type="radio" name="q3" value="1" onclick="check()"> <span>Extranjero</span>
+                                <label class="radio"> <input type="radio" name="q3" value="0" onclick="check()"> <span>exhaustivo</span>
                                 </label>
                             </div>
                             <div class="ans ml-2">
-                                <label class="radio"> <input type="radio" name="q3" value="0" onclick="check()"> <span>Estrangero</span>
+                                <label class="radio"> <input type="radio" name="q3" value="1" onclick="check()"> <span>hórbita</span>
                                 </label>
                             </div>
                         </div>
                         <div id="dq4" class="question bg-white p-3 border-bottom" hidden>
                             <div class="d-flex flex-row align-items-center question-title">
                                 <h3 class="text-danger">4.</h3>
-                                <h5 class="mt-1 ml-2">¿Que palabra está mal escrita?</h5>
+                                <h5 class="mt-1 ml-2">¿cuál de las siguientes palabras no se escribe de forma junta?</h5>
                             </div>
                             <div class="ans ml-2">
-                                <label class="radio"> <input type="radio" name="q4" value="0" onclick="check()"> <span>Ubicación</span>
+                                <label class="radio"> <input type="radio" name="q4" value="1" onclick="check()"> <span>Atrasmano</span>
                                 </label>
                             </div>
                             <div class="ans ml-2">
-                                <label class="radio"> <input type="radio" name="q4" value="0" onclick="check()"> <span>Pastillas </span>
+                                <label class="radio"> <input type="radio" name="q4" value="0" onclick="check()"> <span>sobrenombre </span>
                                 </label>
                             </div>
                             <div class="ans ml-2">
-                                <label class="radio"> <input type="radio" name="q4" value="1" onclick="check()"> <span>Automóbil</span>
+                                <label class="radio"> <input type="radio" name="q4" value="0" onclick="check()"> <span>descorazonado</span>
                                 </label>
                             </div>
                         </div>
                         <div id="dq5" class="question bg-white p-3 border-bottom" hidden>
                             <div class="d-flex flex-row align-items-center question-title">
                                 <h3 class="text-danger">5.</h3>
-                                <h5 class="mt-1 ml-2">¿Cuál de las siguientes palabras están mal escritas?<br>Xochimilco 2Xilófono 3 Anexo</h5>
+                                <h5 class="mt-1 ml-2">¿Cuál de las siguientes palabras están mal escritas?</h5>
                             </div>
                             <div class="ans ml-2">
-                                <label class="radio"> <input type="radio" name="q5" value="0" onclick="check()"> <span>1 y 2</span>
+                                <label class="radio"> <input type="radio" name="q5" value="1" onclick="check()"> <span>Chirimolla</span>
                                 </label>
                             </div>
                             <div class="ans ml-2">
-                                <label class="radio"> <input type="radio" name="q5" value="1" onclick="check()"> <span>ninguna</span>
+                                <label class="radio"> <input type="radio" name="q5" value="0" onclick="check()"> <span>repollo</span>
                                 </label>
                             </div>
                             <div class="ans ml-2">
-                                <label class="radio"> <input type="radio" name="q5" value="0" onclick="check()"> <span>todas </span>
+                                <label class="radio"> <input type="radio" name="q5" value="0" onclick="check()"> <span>yegua </span>
                                 </label>
                             </div>
                         </div>
                         <div id="dq6" class="question bg-white p-3 border-bottom" hidden>
                             <div class="d-flex flex-row align-items-center question-title">
                                 <h3 class="text-danger">6.</h3>
-                                <h5 class="mt-1 ml-2">¿Cuál es la forma correcta de escribir CONE_ION?</h5>
+                                <h5 class="mt-1 ml-2">Encuentra la palabra escrita incorrectamente</h5>
                             </div>
                             <div class="ans ml-2">
-                                <label class="radio"> <input type="radio" name="q6" value="0" onclick="check()"> <span>conesion</span>
+                                <label class="radio"> <input type="radio" name="q6" value="0" onclick="check()"> <span>estrambótico</span>
                                 </label>
                             </div>
                             <div class="ans ml-2">
-                                <label class="radio"> <input type="radio" name="q6" value="1" onclick="check()"> <span>conexión</span>
+                                <label class="radio"> <input type="radio" name="q6" value="0" onclick="check()"> <span>escena</span>
                                 </label>
                             </div>
                             <div class="ans ml-2">
-                                <label class="radio"> <input type="radio" name="q6" value="0" onclick="check()"> <span>conecion</span>
+                                <label class="radio"> <input type="radio" name="q6" value="1" onclick="check()"> <span>estremo</span>
                                 </label>
                             </div>
                         </div>
@@ -136,69 +137,71 @@
                                 <h5 class="mt-1 ml-2">¿Cuáles palabras están escritas correctamente?</h5>
                             </div>
                             <div class="ans ml-2">
-                                <label class="radio"> <input type="radio" name="q7" value="0" onclick="check()"> <span>sanahoria, sapato, zoolóico.</span>
+                                <label class="radio"> <input type="radio" name="q7" value="0" onclick="check()"> <span>alcantarilla</span>
                                 </label>
                             </div>
                             <div class="ans ml-2">
-                                <label class="radio"> <input type="radio" name="q7" value="0" onclick="check()"> <span>zapatear, surdo, sorro.</span>
+                                <label class="radio"> <input type="radio" name="q7" value="1" onclick="check()"> <span>bachiyerato</span>
                                 </label>
                             </div>
                             <div class="ans ml-2">
-                                <label class="radio"> <input type="radio" name="q7" value="1" onclick="check()"> <span>garantizar, forzado, cerveza.</span>
+                                <label class="radio"> <input type="radio" name="q7" value="0" onclick="check()"> <span>abyección</span>
                                 </label>
                             </div>
                         </div>
                         <div id="dq8" class="question bg-white p-3 border-bottom" hidden>
                             <div class="d-flex flex-row align-items-center question-title">
                                 <h3 class="text-danger">8.</h3>
-                                <h5 class="mt-1 ml-2">Todos los plurales terminan con la letra….</h5>
+                                <h5 class="mt-1 ml-2">¿cuál de las siguientes palabras se escribe con h?
+
+                                </h5>
                             </div>
                             <div class="ans ml-2">
-                                <label class="radio"> <input type="radio" name="q8" value="1" onclick="check()"> <span>S</span>
+                                <label class="radio"> <input type="radio" name="q8" value="1" onclick="check()"> <span>harpía</span>
                                 </label>
                             </div>
                             <div class="ans ml-2">
-                                <label class="radio"> <input type="radio" name="q8" value="0" onclick="check()"> <span>A</span>
+                                <label class="radio"> <input type="radio" name="q8" value="0" onclick="check()"> <span>herudito</span>
                                 </label>
                             </div>
                             <div class="ans ml-2">
-                                <label class="radio"> <input type="radio" name="q8" value="0" onclick="check()"> <span>L</span>
+                                <label class="radio"> <input type="radio" name="q8" value="0" onclick="check()"> <span>hanodino</span>
                                 </label>
                             </div>
                         </div>
                         <div id="dq9" class="question bg-white p-3 border-bottom" hidden>
                             <div class="d-flex flex-row align-items-center question-title">
                                 <h3 class="text-danger">9.</h3>
-                                <h5 class="mt-1 ml-2">Selecciona la palabra correcta </h5>
+                                <h5 class="mt-1 ml-2">¿cuál de las siguientes palabras se escribe con y?</h5>
                             </div>
                             <div class="ans ml-2">
-                                <label class="radio"> <input type="radio" name="q9" value="1" onclick="check()"> <span>Divino</span>
+                                <label class="radio"> <input type="radio" name="q9" value="0" onclick="check()"> <span>Peyejoreyano</span>
                                 </label>
                             </div>
                             <div class="ans ml-2">
-                                <label class="radio"> <input type="radio" name="q9" value="0" onclick="check()"> <span>Dibidir</span>
+                                <label class="radio"> <input type="radio" name="q9" value="1" onclick="check()"> <span>oyera</span>
                                 </label>
                             </div>
                             <div class="ans ml-2">
-                                <label class="radio"> <input type="radio" name="q9" value="0" onclick="check()"> <span>Billancico</span>
+                                <label class="radio"> <input type="radio" name="q9" value="0" onclick="check()"> <span>paeya</span>
                                 </label>
                             </div>
                         </div>
                         <div id="dq10" class="question bg-white p-3 border-bottom" hidden>
                             <div class="d-flex flex-row align-items-center question-title">
                                 <h3 class="text-danger">10.</h3>
-                                <h5 class="mt-1 ml-2">¿Cuál de las siguientes oraciones lleva el punto y coma correctamente?</h5>
+                                <h5 class="mt-1 ml-2">Indica cuál de las siguientes palabras no se encuentra escrita correctamente:</h5>
                             </div>
                             <div class="ans ml-2">
-                                <label class="radio"> <input type="radio" name="q10" value="1" onclick="check()"> <span>"Me gusta la pizza; a Carlos también le gusta la pizza."</span><!--Correcta-->
+                                <label class="radio"> <input type="radio" name="q10" value="0" onclick="check()"> <span>haz</span><!--Correcta-->
                                 </label>
                             </div>
                             <div class="ans ml-2">
-                                <label class="radio"> <input type="radio" name="q10" value="0" onclick="check()"> <span>"Me gusta la pizza a Carlos también le gusta la; pizza."</span>
+                                <label class="radio"> <input type="radio" name="q10" value="0" onclick="check()"> <span>evacuar</span>
                                 </label>
                             </div>
                             <div class="ans ml-2">
-                                <label class="radio"> <input type="radio" name="q10" value="0" onclick="check()"> <span>"Me gusta la pizza; a Carlos también le gusta la pizza;."</span>
+                                <label class="radio"> <input type="radio" name="q10" value="1" onclick="check()"> <span>hintuitivo</span>
                                 </label>
                             </div>
                         </div>
