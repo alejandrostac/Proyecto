@@ -3,16 +3,31 @@
 
 	$user = $_POST['user'];
 	$pass = $_POST['password'];
+	$type = $_POST['type'];
 
-	$query = "SELECT * FROM usuarios WHERE user = '".$user."' AND pass = '".$pass."'";
-	if($resultado = mysqli_query($enlace, $query)){
-		echo "La conexión fue exitosa<br>";
-		if(mysqli_num_rows($resultado)>0){
-			header("location: ../student.html");
+	if($type == 0){
+		$query = "SELECT * FROM usuarios WHERE user = '".$user."' AND pass = '".$pass."'";
+		if($resultado = mysqli_query($enlace, $query)){
+			echo "La conexión fue exitosa<br>";
+			if(mysqli_num_rows($resultado)>0){
+				header("location: ../student.html");
+			}else{
+				echo "Acceso Denegado";
+			}
 		}else{
-			echo "Acceso Denegado";
+			echo "No es posible conectar a la base de datos";
 		}
 	}else{
-		echo "No es posible conectar a la base de datos";
+		$query = "SELECT * FROM teachers WHERE user = '".$user."' AND pass = '".$pass."'";
+		if($resultado = mysqli_query($enlace, $query)){
+			echo "La conexión fue exitosa<br>";
+			if(mysqli_num_rows($resultado)>0){
+				header("location: ../teacher.html");
+			}else{
+				echo "Acceso Denegado";
+			}
+		}else{
+			echo "No es posible conectar a la base de datos";
+		}
 	}
 ?>
