@@ -28,22 +28,8 @@
             <input class="form-control" id="myInput" type="text" placeholder="Buscar Alumno">
           </div>
         </div>
-        <table class="table table-bordered">
-          <tbody id="myTable">
-            <tr>
-              <td>John</td>
-            </tr>
-            <tr>
-              <td>Mary</td>
-            </tr>
-            <tr>
-              <td>July</td>
-            </tr>
-            <tr>
-              <td>Anja</td>
-            </tr>
-          </tbody>
-        </table>
+        <div id="table">
+        </div>
       </div>
     </div>
     <div class="col-md-2">
@@ -51,7 +37,7 @@
     <div class="col-md-2">
     </div>
   </div>
-  <div>
+  <div id="tests">
     <table class="table table-bordered">
       <thead>
         <tr>
@@ -64,34 +50,6 @@
           <th scope="col">Errores</th>
         </tr>
       </thead>
-      <tbody>
-        <tr>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
-          <td>@mdo</td>
-          <td>@mdo</td>
-          <td>@mdo</td>
-          <td>@mdo</td>
-        </tr>
-        <tr>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
-          <td>@mdo</td>
-          <td>@mdo</td>
-          <td>@mdo</td>
-          <td>@mdo</td>
-        </tr>
-        <tr>
-          <td>Larry</td>
-          <td>the Bird</td>
-          <td>@twitter</td>
-          <td>@mdo</td>
-          <td>@mdo</td>
-          <td>@mdo</td>
-          <td>@mdo</td>
-        </tr>
       </tbody>
     </table>
   </div>
@@ -116,5 +74,32 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <!-- Importante llamar antes a jQuery para que funcione bootstrap.min.js   -->
 <script src="js/bootstrap.min.js"></script> <!-- Llamamos al JavaScript de Bootstrap -->
+<script type="text/javascript">
+  $(document).ready(function(){
+    $.ajax({
+      type: "GET",
+      url: "php/students.php",
+      data: "",
+      success:function(response){
+        document.getElementById("table").innerHTML= response;
+      }
+    });
+  });
+
+  function getExams(id,name,lastname){
+    $.ajax({
+      type: "post",
+      url: "php/tests.php",
+      data: {
+        id:id,
+        name:name,
+        lastname:lastname,
+      },
+      success:function(response){
+        document.getElementById("tests").innerHTML= response;
+      }
+    });
+  }
+</script>
 </body>
 </html>
