@@ -10,6 +10,8 @@
 		if($resultado = mysqli_query($enlace, $query)){
 			echo "La conexión fue exitosa<br>";
 			if(mysqli_num_rows($resultado)>0){
+				$row = mysqli_fetch_array($resultado);
+				$_SESSION["id"] = $row["id"];
 				$_SESSION["type"] = "student";
 				header("location: ../student.html");
 			}else{
