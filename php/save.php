@@ -9,45 +9,48 @@
 	$email = $_POST['email'];
 	$type = $_POST['type'];
 
+	$return = "";
+
 	if($type == 0){
 		if($pass == $pass2){
 			$query = "SELECT * FROM usuarios WHERE user = '".$user."'";
 			if($resultado = mysqli_query($enlace, $query)){
 				if(mysqli_num_rows($resultado)>0){
-					echo "el usuario ya existe";
+					$return = "duplicate";
 				}else{
 					$query = "INSERT INTO usuarios (name,lastname,email,user,pass) VALUES ('".$name."','".$lastname."','".$email."','".$user."','".$pass."')";
 					if(mysqli_query($enlace, $query)){
-						echo "se creo nuevo registro";
+						$return = "saved";
 					}else{
-						echo "No es posible conectar a la base de datos";
+						$return = "error";
 					}
 				}
 			}else{
-				echo "No es posible conectar a la base de datos";
+				$return = "error";
 			}
 		}else{
-			echo "la contraseñas no coinciden";	
+			$return = "pass";
 		}
 	}else{
 		if($pass == $pass2){
 			$query = "SELECT * FROM teachers WHERE user = '".$user."'";
 			if($resultado = mysqli_query($enlace, $query)){
 				if(mysqli_num_rows($resultado)>0){
-					echo "el usuario ya existe";
+					$return = "duplicate";
 				}else{
 					$query = "INSERT INTO teachers (name,lastname,email,user,pass) VALUES ('".$name."','".$lastname."','".$email."','".$user."','".$pass."')";
 					if(mysqli_query($enlace, $query)){
-						echo "se creo nuevo registro";
+						$return = "saved";
 					}else{
-						echo "No es posible conectar a la base de datos";
+						$return = "error";
 					}
 				}
 			}else{
-				echo "No es posible conectar a la base de datos";
+				$return = "error";
 			}
 		}else{
-			echo "la contraseñas no coinciden";	
+			$return = "pass";	
 		}
 	}
+	echo $return;
 ?>

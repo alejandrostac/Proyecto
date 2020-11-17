@@ -33,7 +33,7 @@
 		}
 	}else{
 		$table = $table . "<tr>
-		  	<td>El estudiante aun no realiza ningun examen</td>
+		  	<td>".$name." ".$lastname." aun no realiza ningun examen</td>
 		  	<td></td>
 		  	<td></td>
 		  	<td></td>

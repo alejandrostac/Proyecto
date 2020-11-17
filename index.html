@@ -160,7 +160,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <form action="php/save.php" method="POST">
+        <form id="teacher" action="php/save.php" method="POST">
             <input type="hidden" name="type" value="1">
             <div class="row">
                 <div class="col form-group">
@@ -196,10 +196,116 @@
       </div>
     </div>
 </div>
+</div>
 
+<div id="created" class="toast" role="alert" aria-live="assertive" aria-atomic="true" style="z-index: 7000; position: absolute; top: 0; right: 0;" data-delay="10000">
+  <div class="toast-header">
+    <strong class="mr-auto">Usuario Guardado</strong>
+  </div>
+  <div class="toast-body">
+    Ya puedes acceder a la plataforma con el usuario nuevo
+  </div>
+</div>
+
+<div id="error" class="toast" role="alert" aria-live="assertive" aria-atomic="true" style="z-index: 7000; position: absolute; top: 0; right: 0;" data-delay="10000">
+  <div class="toast-header">
+    <strong class="mr-auto">No se pudo conectar a la base de datos</strong>
+  </div>
+  <div class="toast-body">
+    Intente mas tarde
+  </div>
+</div>
+
+<div id="duplicated" class="toast" role="alert" aria-live="assertive" aria-atomic="true" style="z-index: 7000; position: absolute; top: 0; right: 0;" data-delay="10000">
+  <div class="toast-header">
+    <strong class="mr-auto">El usuario ya existe</strong>
+  </div>
+  <div class="toast-body">
+    intente con otro nombre de usuario
+  </div>
+</div>
+
+<div id="passwordfail" class="toast" role="alert" aria-live="assertive" aria-atomic="true" style="z-index: 7000; position: absolute; top: 0; right: 0;" data-delay="10000">
+  <div class="toast-header">
+    <strong class="mr-auto">Las contraseñas no coinciden</strong>
+  </div>
+  <div class="toast-body">
+    Revise sus contraseñas
+  </div>
+</div>
+
+</body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <!-- Importante llamar antes a jQuery para que funcione bootstrap.min.js   -->
 <script src="js/bootstrap.min.js"></script> <!-- Llamamos al JavaScript de Bootstrap -->
-</body>
-
+<script>
+    $( "#student" ).submit(function( event ) {
+        event.preventDefault(); // avoid to execute the actual submit of the form.
+        var form = $(this);
+        var url = form.attr('action');
+        $.ajax({
+            type: "POST",
+            url: url,
+            data: form.serialize(), // serializes the form's elements.
+            success: function(data)
+            {
+                //$('.toast').toast('hide');
+                switch(data){
+                    case "saved":
+                        $('#created').toast('show');
+                        $('#exampleModal').modal('hide')
+                    break;
+                    case "error":
+                        $('#error').toast('show');
+                    break;
+                    case "duplicate":
+                        $('#duplicated').toast('show');
+                    break;
+                    case "pass":
+                        $('#passwordfail').toast('show');
+                    break;
+                }
+                if(data=="true"){
+                    $('#created').toast('show');
+                }else{
+                    $('#notcreated').toast('show');
+                }
+            }
+        });
+    });
+    $( "#teacher" ).submit(function( event ) {
+        event.preventDefault(); // avoid to execute the actual submit of the form.
+        var form = $(this);
+        var url = form.attr('action');
+        $.ajax({
+            type: "POST",
+            url: url,
+            data: form.serialize(), // serializes the form's elements.
+            success: function(data)
+            {
+                //$('.toast').toast('hide');
+                switch(data){
+                    case "saved":
+                        $('#created').toast('show');
+                        $('#exampleModal').modal('hide')
+                    break;
+                    case "error":
+                        $('#error').toast('show');
+                    break;
+                    case "duplicate":
+                        $('#duplicated').toast('show');
+                    break;
+                    case "pass":
+                        $('#passwordfail').toast('show');
+                    break;
+                }
+                if(data=="true"){
+                    $('#created').toast('show');
+                }else{
+                    $('#notcreated').toast('show');
+                }
+            }
+        });
+    });
+</script>
 </html>
