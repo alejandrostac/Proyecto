@@ -20,7 +20,7 @@
 </nav>
 <div class="mt-3 container">
   <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-8">
       <div>
         <div class="form-group row">
           <label for="user" class="col-md-2 col-form-label">Buscar</label>
@@ -32,25 +32,17 @@
         </div>
       </div>
     </div>
-    <div class="col-md-3">
+    <div class="col-md-4">
+      <a data-toggle="modal" data-target="#exampleModal">
       <div class="card d-block h-100 box-shadow-hover pointer">
         <div class="pt-3 h-75p align-items-center d-flex justify-content-center">
         <img class="img-fluid w-xs-120p" src="pic/book.png">
         </div>
         <div class="card-body">
-            <h3 class="h4"><strong>Consultar</strong></h3>
+            <h3 class="h4"><strong>Consultar Personalizada</strong></h3>
         </div>
       </div>
-    </div>
-    <div class="col-md-3">
-      <div class="card d-block h-100 box-shadow-hover pointer">
-        <div class="pt-3 h-75p align-items-center d-flex justify-content-center">
-        <img class="img-fluid w-xs-120p" src="pic/book.png">
-        </div>
-        <div class="card-body">
-            <h3 class="h4"><strong>Nueva Consulta</strong></h3>
-        </div>
-      </div>
+      </a>
     </div>
   </div>
   <br>
@@ -78,46 +70,69 @@
     </p>
   </div>
 </footer>
-<script>
-  $(document).ready(function(){
-    $("#myInput").on("keyup", function() {
-      var value = $(this).val().toLowerCase();
-      $("#myTable tr").filter(function() {
-        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-      });
-    });
-  });
-</script>
+
+
+<div class="modal fade  .modal-lg" id="exampleModal" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Consultar base de datos</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form id="query" action="php/query.php" method="POST">
+          <div class="col form-group">
+              <label for="name" class="col-form-label">Tipos de Examen:</label>
+              <select class="form-control" name="test">
+                <option value = "1">Examen 1</option>
+                <option value = "2">Examen 2</option>
+                <option value = "0">Todos los Examenes</option>
+              </select>
+          </div>
+          <div class="col form-group">
+              <label for="name" class="col-form-label">Nivel de Examen:</label>
+              <select class="form-control" name="level">
+                <option value = "1">Ortografía 1</option>
+                <option value = "2">Ortografía 2</option>
+                <option value = "3">Ortografía 3</option>
+                <option value = "4">Ortografía 4</option>
+                <option value = "5">Ortografía 5</option>
+                <option value = "6">Ortografía 6</option>
+                <option value = "0">Todos los Niveles</option>
+              </select>
+          </div>
+          <button type="submit" class="btn btn-primary">Realizar consulta</button>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+      </div>
+    </div>
+    </div>
+</div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <!-- Importante llamar antes a jQuery para que funcione bootstrap.min.js   -->
 <script src="js/bootstrap.min.js"></script> <!-- Llamamos al JavaScript de Bootstrap -->
-<script type="text/javascript">
-  $(document).ready(function(){
-    $.ajax({
-      type: "GET",
-      url: "php/students.php",
-      data: "",
-      success:function(response){
-        document.getElementById("table").innerHTML= response;
-      }
-    });
-  });
-
-  function getExams(id,name,lastname){
-    $.ajax({
-      type: "post",
-      url: "php/tests.php",
-      data: {
-        id:id,
-        name:name,
-        lastname:lastname,
-      },
-      success:function(response){
-        document.getElementById("tests").innerHTML= response;
-      }
-    });
-  }
-</script>
+<script src="js/teacher.js"></script>
 <script src="js/sesion.js"></script>
+<script type="text/javascript">
+  $( "#query" ).submit(function(event) {
+        event.preventDefault(); // avoid to execute the actual submit of the form.
+        var form = $(this);
+        var url = form.attr('action');
+        $.ajax({
+            type: "POST",
+            url: url,
+            data: form.serialize(), // serializes the form's elements.
+            success: function(response)
+            {
+              document.getElementById("tests").innerHTML= response;
+              $('#exampleModal').modal('hide');
+            }
+        });
+    });
+</script>
 </body>
 </html>
