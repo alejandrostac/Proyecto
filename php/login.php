@@ -8,12 +8,11 @@
 	if($type == 0){
 		$query = "SELECT * FROM usuarios WHERE user = '".$user."' AND pass = '".$pass."'";
 		if($resultado = mysqli_query($enlace, $query)){
-			echo "La conexión fue exitosa<br>";
 			if(mysqli_num_rows($resultado)>0){
 				$row = mysqli_fetch_array($resultado);
 				$_SESSION["id"] = $row["id"];
 				$_SESSION["type"] = "student";
-				header("location: ../student.html");
+				echo "Student";
 			}else{
 				echo "Acceso Denegado";
 			}
@@ -23,10 +22,9 @@
 	}else{
 		$query = "SELECT * FROM teachers WHERE user = '".$user."' AND pass = '".$pass."'";
 		if($resultado = mysqli_query($enlace, $query)){
-			echo "La conexión fue exitosa<br>";
 			if(mysqli_num_rows($resultado)>0){
 				$_SESSION["type"] = "teacher";
-				header("location: ../teacher.html");
+				echo "Teacher";
 			}else{
 				echo "Acceso Denegado";
 			}
