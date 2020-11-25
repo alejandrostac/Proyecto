@@ -13,9 +13,9 @@
 			$table = '<table class="table table-bordered"><tbody>';
 				$table = $table . '
 					<tr>
-			         	<th scope="col">Pregunta</th>
+			         	<th scope="col">El lugar de la basura está en el...</th>
 			          	<th scope="col">Respuesta Correcta</th>
-				        <th scope="col">Respuesta</th>
+				        <th scope="col">bote</th>
 			        </tr>';
 			    //Pregunta 1
 			    $table = $table.'<tr>
