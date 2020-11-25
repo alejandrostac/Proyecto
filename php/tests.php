@@ -15,6 +15,7 @@
 		        <th scope="col">Hora</th>
 		        <th scope="col">Aciertos</th>
 		    	<th scope="col">Errores</th>
+		    	<th scope="col">Acción</th>
 	        </tr>
 	    </thead>
 		<tbody>';
@@ -29,11 +30,13 @@
 		  	<td>". $row['time']."</td>
 		  	<td>". $row['correct']."</td>
 		  	<td>". $row['incorrect']."</td>
+		  	<td><button type='button' class='btn btn-success' onClick='checkTest(".$row['id'].")'>Ver</button></td>
 		</tr>";
 		}
 	}else{
 		$table = $table . "<tr>
 		  	<td>".$name." ".$lastname." aun no realiza ningun examen</td>
+		  	<td></td>
 		  	<td></td>
 		  	<td></td>
 		  	<td></td>

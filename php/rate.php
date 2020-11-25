@@ -9,7 +9,7 @@
 	$fine = $_POST['q1']+$_POST['q2']+$_POST['q3']+$_POST['q4']+$_POST['q5']+$_POST['q6']+$_POST['q7']+$_POST['q8']+$_POST['q9']+$_POST['q10'];
 	$fail = 10 - $fine;
 
-	$query = "INSERT INTO tests (name,date,time,correct,incorrect,id_student) VALUES ('".$name."','".$date."','".$time."','".$fine."','".$fail."','".$_SESSION["id"]."')";
+	$query = "INSERT INTO tests (name,date,time,correct,incorrect,id_student,q1,q2,q3,q4,q5,q6,q7,q8,q9,q10) VALUES ('".$name."','".$date."','".$time."','".$fine."','".$fail."','".$_SESSION["id"]."','".$_POST["q1"]."','".$_POST["q2"]."','".$_POST["q3"]."','".$_POST["q4"]."','".$_POST["q5"]."','".$_POST["q6"]."','".$_POST["q7"]."','".$_POST["q8"]."','".$_POST["q9"]."','".$_POST["q10"]."')";
 	if(mysqli_query($enlace, $query)){
 		header("location: ../student.html");
 	}else{

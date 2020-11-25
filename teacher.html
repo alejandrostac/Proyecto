@@ -57,6 +57,7 @@
           <th scope="col">Hora</th>
           <th scope="col">Aciertos</th>
           <th scope="col">Errores</th>
+          <th scope="col">Acción</th>
         </tr>
       </thead>
       </tbody>
@@ -70,6 +71,9 @@
     </p>
   </div>
 </footer>
+
+<div class="modal fade  .modal-lg" id="examCheck" role="dialog" aria-labelledby="examCheckLabel" aria-hidden="true">
+</div>
 
 
 <div class="modal fade  .modal-lg" id="exampleModal" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -119,20 +123,34 @@
 <script src="js/sesion.js"></script>
 <script type="text/javascript">
   $( "#query" ).submit(function(event) {
-        event.preventDefault(); // avoid to execute the actual submit of the form.
-        var form = $(this);
-        var url = form.attr('action');
-        $.ajax({
-            type: "POST",
-            url: url,
-            data: form.serialize(), // serializes the form's elements.
-            success: function(response)
-            {
-              document.getElementById("tests").innerHTML= response;
-              $('#exampleModal').modal('hide');
-            }
-        });
+    event.preventDefault(); // avoid to execute the actual submit of the form.
+    var form = $(this);
+    var url = form.attr('action');
+    $.ajax({
+        type: "POST",
+        url: url,
+        data: form.serialize(), // serializes the form's elements.
+        success: function(response)
+        {
+          document.getElementById("tests").innerHTML= response;
+          $('#exampleModal').modal('hide');
+        }
     });
+  });
+  function checkTest(id) {
+    $.ajax({
+        type: "POST",
+        url: "php/check.php",
+        data: {
+          id:id
+        },
+        success: function(response)
+        {
+          document.getElementById("examCheck").innerHTML= response;
+          $('#examCheck').modal("show")
+        }
+    });
+  }
 </script>
 </body>
 </html>
