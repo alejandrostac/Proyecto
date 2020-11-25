@@ -13,14 +13,14 @@
 			$table = '<table class="table table-bordered"><tbody>';
 				$table = $table . '
 					<tr>
-			         	<th scope="col">El lugar de la basura está en el...</th>
+			         	<th scope="col">Pregunta</th>
 			          	<th scope="col">Respuesta Correcta</th>
-				        <th scope="col">bote</th>
+				        <th scope="col">Respuesta</th>
 			        </tr>';
 			    //Pregunta 1
 			    $table = $table.'<tr>
-			        	<td>Pregunta</td>
-			        	<td>Respuesta</td>';
+			        	<td>El lugar de la basura está en el...</td>
+			        	<td>bote</td>';
 			    if($row['q1']){
 			    	$table = $table.'<td>Correcta</td></tr>';
 			    }else{
@@ -29,8 +29,8 @@
 
 			    //Pregunta 2
 			    $table = $table.'<tr>
-			        	<td>Pregunta</td>
-			        	<td>Respuesta</td>';
+			        	<td>¿Cuál es la forma correcta?</td>
+			        	<td>¡échale ganas!</td>';
 			    if($row['q2']){
 			    	$table = $table.'<td>Correcta</td></tr>';
 			    }else{
@@ -39,8 +39,8 @@
 
 			    //Pregunta 3
 			    $table = $table.'<tr>
-			        	<td>Pregunta</td>
-			        	<td>Respuesta</td>';
+			        	<td>¿Cuál es la palabra correcta?</td>
+			        	<td>Extranjero</td>';
 			    if($row['q3']){
 			    	$table = $table.'<td>Correcta</td></tr>';
 			    }else{
@@ -49,8 +49,8 @@
 
 			    //Pregunta 4
 			    $table = $table.'<tr>
-			        	<td>Pregunta</td>
-			        	<td>Respuesta</td>';
+			        	<td>¿Que palabra está mal escrita?</td>
+			        	<td>Automóbil</td>';
 			    if($row['q4']){
 			    	$table = $table.'<td>Correcta</td></tr>';
 			    }else{
@@ -59,8 +59,10 @@
 
 			    //Pregunta 5
 			    $table = $table.'<tr>
-			        	<td>Pregunta</td>
-			        	<td>Respuesta</td>';
+			        	<td>¿Cuál de las siguientes palabras están mal escritas?
+						Xochimilco 2Xilófono 3 Anexo
+						</td>
+			        	<td>ninguna</td>';
 			    if($row['q5']){
 			    	$table = $table.'<td>Correcta</td></tr>';
 			    }else{
@@ -69,8 +71,8 @@
 
 			    //Pregunta 6
 			    $table = $table.'<tr>
-			        	<td>Pregunta</td>
-			        	<td>Respuesta</td>';
+			        	<td>¿Cuál es la forma correcta de escribir CONE_ION?</td>
+			        	<td>conexión</td>';
 			    if($row['q6']){
 			    	$table = $table.'<td>Correcta</td></tr>';
 			    }else{
@@ -79,8 +81,8 @@
 
 			    //Pregunta 7
 			    $table = $table.'<tr>
-			        	<td>Pregunta</td>
-			        	<td>Respuesta</td>';
+			        	<td>¿Cuáles palabras están escritas correctamente?</td>
+			        	<td>garantizar, forzado, cerveza.</td>';
 			    if($row['q7']){
 			    	$table = $table.'<td>Correcta</td></tr>';
 			    }else{
@@ -89,8 +91,8 @@
 
 			    //Pregunta 8
 			    $table = $table.'<tr>
-			        	<td>Pregunta</td>
-			        	<td>Respuesta</td>';
+			        	<td>Todos los plurales terminan con la letra….</td>
+			        	<td>S</td>';
 			    if($row['q8']){
 			    	$table = $table.'<td>Correcta</td></tr>';
 			    }else{
@@ -99,8 +101,8 @@
 
 			    //Pregunta 9
 			    $table = $table.'<tr>
-			        	<td>Pregunta</td>
-			        	<td>Respuesta</td>';
+			        	<td>Selecciona la palabra correcta </td>
+			        	<td>Divino</td>';
 			    if($row['q9']){
 			    	$table = $table.'<td>Correcta</td></tr>';
 			    }else{
@@ -109,8 +111,8 @@
 
 			    //Pregunta 10
 			    $table = $table.'<tr>
-			        	<td>Pregunta</td>
-			        	<td>Respuesta</td>';
+			        	<td>¿Cuál de las siguientes oraciones lleva el punto y coma correctamente?</td>
+			        	<td>"Me gusta la pizza; a Carlos también le gusta la pizza."</td>';
 			    if($row['q10']){
 			    	$table = $table.'<td>Correcta</td></tr>';
 			    }else{
